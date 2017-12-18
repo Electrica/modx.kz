@@ -21,6 +21,13 @@ return [
             'hidemenu' => true,
             'uri' => 'sitemap.xml',
             'uri_override' => true,
-        ]
+        ],
+        'test' => [
+            'pagetitle' => 'Test',
+            'template' => 3,
+            'deleted' => 1,
+            'hidemenu' => false,
+            'longtitle' => 'Разработка и поддержка сайтов на MODX в Казахстане'
+        ],
     ],
 ];

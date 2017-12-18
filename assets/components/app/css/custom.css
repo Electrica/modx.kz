@@ -1,0 +1,15 @@
+
+#hero h1{
+    font-size:50px;
+}
+
+header h2{
+    font-size:40px;
+}
+
+.footer-bottom a{
+    border:none;
+}
+#contact-form-thanks{
+    display: none;
+}

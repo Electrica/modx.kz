@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal-contact01" tabindex="-1" role="dialog" aria-labelledby="modal-contact01" aria-hidden="true">
+<div class="modal fade" id="modal-contact-main" tabindex="-1" role="dialog" aria-labelledby="modal-contact01" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
 
@@ -96,7 +96,7 @@
                                             <figcaption class="member-details bordered no-top-border">
                                                 <h3>
                                                     Мишаня
-                                                    <span>+77714002778</span>
+                                                    <span>+77074373008</span>
                                                 </h3>
                                             </figcaption>
 
@@ -121,9 +121,16 @@
             <!-- ============================================================= MODAL CONTENT : END ============================================================= -->
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             </div><!-- /.modal-footer -->
 
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+{'pdoResources'|snippet:[
+    'parents' => 4,
+    'includeContent' => 1,
+    'tpl' => '@FILE chunks/modal/_modalLastWorks.tpl'
+]}

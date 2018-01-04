@@ -122,7 +122,8 @@ $packages = [
     'Ace' => '1.6.5-pl',
     'pdoTools' => '2.10.0-pl',
     'AjaxForm' => '1.1.9-pl',
-    'FormIt' => '3.0.4-pl'
+    'FormIt' => '3.0.4-pl',
+    'DateAgo' => '1.0.4-pl'
 ];
 $success = false;
 

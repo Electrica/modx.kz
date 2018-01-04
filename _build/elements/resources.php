@@ -4,7 +4,7 @@ return [
     'web' => [
         'main' => [
             'pagetitle' => 'Главная',
-            'template' => 3,
+            'template' => 2,
             'hidemenu' => false,
             'longtitle' => 'Разработка и поддержка сайтов на MODX в Казахстане'
         ],
@@ -22,10 +22,10 @@ return [
             'uri' => 'sitemap.xml',
             'uri_override' => true,
         ],
-        'test' => [
-            'pagetitle' => 'Test',
-            'template' => 3,
-            'deleted' => 1,
+        'exampleofwork' => [
+            'pagetitle' => 'Примеры работ',
+            'template' => 0,
+            'isfolder' => 1,
             'hidemenu' => false,
             'longtitle' => 'Разработка и поддержка сайтов на MODX в Казахстане'
         ],

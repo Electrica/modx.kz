@@ -24,8 +24,6 @@
                         <li><a href="#latest-works" class="scroll-to" data-anchor-offset="0">Примеры работ</a></li>
                         <li><a href="#get-in-touch" class="scroll-to" data-anchor-offset="0">Заказать работу</a></li>
 
-
-
                     </ul><!-- /.nav -->
 
                 </div><!-- /.container -->
@@ -47,7 +45,7 @@
                         <h1 class="fadeInDown-1 light-color">Разработка и поддержка<br> сайтов на MODX.</h1>
                         <p class="fadeInDown-2 light-color">Единственные в Казахстане участники официального сообщества MODX.</p>
                         <div class="fadeInDown-3">
-                            <a href="#modal-contact01" data-toggle="modal" class="btn btn-large">Заказать работу</a>
+                            <a href="#modal-contact-main" data-toggle="modal" class="btn btn-large">Заказать работу</a>
                         </div><!-- /.fadeIn -->
 
                     </div><!-- /.caption -->
@@ -178,61 +176,12 @@
                 </header>
                 <div id="owl-latest-works" class="owl-carousel owl-item-gap">
 
-                    <div class="item">
-                        <a href="#modal-work03" data-toggle="modal">
-                            <figure>
-                                <figcaption class="text-overlay">
-                                    <div class="info">
-                                        <h4>STO-MAP. Все СТО России</h4>
-                                        <p>Личный кабинет клиента</p>
-                                    </div><!-- /.info -->
-                                </figcaption>
-                                <img src="{$assets}images/work.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div><!-- /.item -->
-
-                    <div class="item">
-                        <a href="#modal-work04" data-toggle="modal">
-                            <figure>
-                                <figcaption class="text-overlay">
-                                    <div class="info">
-                                        <h4>Ветеринарный магазин </h4>
-                                        <p>Интеграция с агрегатором служб доставок DDelivery</p>
-                                    </div><!-- /.info -->
-                                </figcaption>
-                                <img src="{$assets}images/work.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div><!-- /.item -->
-
-                    <div class="item">
-                        <a href="#modal-work03" data-toggle="modal">
-                            <figure>
-                                <figcaption class="text-overlay">
-                                    <div class="info">
-                                        <h4>Vinyl Records</h4>
-                                        <p>Identity</p>
-                                    </div><!-- /.info -->
-                                </figcaption>
-                                <img src="{$assets}images/work.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div><!-- /.item -->
-
-                    <div class="item">
-                        <a href="#modal-work03" data-toggle="modal">
-                            <figure>
-                                <figcaption class="text-overlay">
-                                    <div class="info">
-                                        <h4>Astor & Yancy</h4>
-                                        <p>Identity</p>
-                                    </div><!-- /.info -->
-                                </figcaption>
-                                <img src="{$assets}images/work.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div><!-- /.item -->
+                    {'pdoResources'|snippet:[
+                        'parents' => 4,
+                        'limit' => 4,
+                        'includeContent' => 1,
+                        'tpl' => '@FILE chunks/main/lastWorks.tpl'
+                    ]}
 
                 </div><!-- /.owl-carousel -->
             </div><!-- /.row -->
@@ -250,124 +199,11 @@
                         <p>Только самые современные технологии в мире MODX, прямая поддержка владельцев и разработчиков платформы MODX.
                             Все это для Вас.</p>
                     </header>
-                    <a href="#modal-contact01" data-toggle="modal" class="btn btn-large">Заказать работу</a>
+                    <a href="#modal-contact-main" data-toggle="modal" class="btn btn-large">Заказать работу</a>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>
-
-
-
-    <div class="modal fade" id="modal-work03" tabindex="-1" role="dialog" aria-labelledby="modal-work03" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
-                    <h4 class="modal-title" id="modal-work03">Личный кабинет для сайта</h4>
-                </div><!-- /.modal-header -->
-
-                <div class="modal-body">
-
-                    <section id="portfolio-post">
-                        <div class="container inner-top-xs inner-bottom">
-
-
-                            <div class="row">
-
-                                <div class="col-sm-7 inner-top-xs inner-right-xs">
-                                    <header>
-                                        <h2>STO-MAP. Все СТО России</h2>
-                                        <h3>Задача</h3>
-                                        <p class="text-normal">Добавить к справочнику СТО личный кабинет клиента с возможностью регистрации своей станции техобслуживания</p>
-                                        <h3>Что сделали</h3>
-                                        <p class="text-normal">Подключили заранее подготовленную клиентом анкету для нового СТО,
-                                            настоили проверку на заполнение обязятельных полей и, используя родные процессоры MODX,
-                                            подключили сохранение новой анкеты в уже существующую базу.
-                                        </p>
-                                        <p class="text-normal">Естественно предоставили клиенту возможность последующего редатирования анкеты, а также подключив, платежную систему дали возможность поднятия СТО в рейтинге портала</p>
-                                    </header>
-                                </div><!-- /.col -->
-
-                                <div class="col-sm-4 col-sm-offset-1 outer-top-xs inner-left-xs border-left">
-                                    <ul class="item-details">
-                                        <li class="date">9 декабря 2017</li>
-                                        <li class="categories">Личный кабинет, Управление страницей, Права доступа</li>
-                                        <li class="client">STO-MAP. Все СТО России</li>
-                                        <li class="url"><a href="http://sto-map.ru/" rel="nofollow" target="_blank">http://sto-map.ru/</a></li>
-                                    </ul><!-- /.item-details -->
-                                </div><!-- /.col -->
-
-                            </div><!-- /.row -->
-
-                        </div><!-- /.container -->
-
-                    </section>
-
-                </div><!-- /.modal-body -->
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div><!-- /.modal-footer -->
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="modal fade" id="modal-work04" tabindex="-1" role="dialog" aria-labelledby="modal-work04" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
-                    <h4 class="modal-title" id="modal-work04">Интеграция с агрегатором служб доставок DDelivery</h4>
-                </div><!-- /.modal-header -->
-
-                <div class="modal-body">
-
-                    <section id="portfolio-post">
-                        <div class="container inner-top-xs inner-bottom">
-
-
-                            <div class="row">
-
-                                <div class="col-sm-7 inner-top-xs inner-right-xs">
-                                    <header>
-                                        <h2>Интеграция с агрегатором служб доставок DDelivery</h2>
-                                        <h3>Задача</h3>
-                                        <p class="text-normal">Подключить к интернет-магазину службу доставки DDelivery</p>
-                                        <h3>Что сделали</h3>
-                                        <p class="text-normal">Подключили к сайту выбор удобного способа доставки от агрегатора служб доставки Ddelivery.
-                                            Сразу же добавили учет стоимости доставки в общей сумме заказа. После оплаты заказа - автоматически отправляется заявка на забор товара в ранее выбранную службу доставки.
-                                        </p>
-                                        <p class="text-normal">Бонусом обновили клиенту MODX до свежей версии и исправили несколько ошибок, оставшихся от предыдущего программиста</p>
-                                    </header>
-                                </div><!-- /.col -->
-
-                                <div class="col-sm-4 col-sm-offset-1 outer-top-xs inner-left-xs border-left">
-                                    <ul class="item-details">
-                                        <li class="date">1 декабря 2017</li>
-                                        <li class="categories">Интеграция, Служба доставки, Minishop2, Обновление MODX</li>
-                                        <li class="client">Ветеринарный интернет-магазин</li>
-                                        <li class="url"><a href="https://vetshop24.ru/" rel="nofollow" target="_blank">vetshop24.ru</a></li>
-                                    </ul><!-- /.item-details -->
-                                </div><!-- /.col -->
-
-                            </div><!-- /.row -->
-
-                        </div><!-- /.container -->
-
-                    </section>
-
-                </div><!-- /.modal-body -->
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div><!-- /.modal-footer -->
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     {include 'file:chunks/modal/_modal.tpl'}
 

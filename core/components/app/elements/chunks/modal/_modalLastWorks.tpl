@@ -28,9 +28,9 @@
                             <div class="col-sm-4 col-sm-offset-1 outer-top-xs inner-left-xs border-left">
                                 <ul class="item-details">
                                     <li class="date">{$publishedon | dateago}</li>
-                                    <li class="categories">Личный кабинет, Управление страницей, Права доступа</li>
+                                    <!--<li class="categories">Личный кабинет, Управление страницей, Права доступа</li>-->
                                     <li class="client">{$pagetitle}</li>
-                                    <li class="url"><a href="http://sto-map.ru/" rel="nofollow" target="_blank">http://sto-map.ru/</a></li>
+                                    <li class="url"><a href="{$_pls['tv.workurl']}" rel="nofollow" target="_blank">{$_pls['tv.workurl']}</a></li>
                                 </ul><!-- /.item-details -->
                             </div><!-- /.col -->
 
@@ -43,7 +43,7 @@
             </div><!-- /.modal-body -->
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             </div><!-- /.modal-footer -->
 
         </div><!-- /.modal-content -->

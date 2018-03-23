@@ -29,5 +29,12 @@ return [
             'hidemenu' => false,
             'longtitle' => 'Разработка и поддержка сайтов на MODX в Казахстане'
         ],
+        'team' => [
+            'pagetitle' => 'Наша команда',
+            'template' => 0,
+            'isfolder' => 1,
+            'hidemenu' => true,
+            'longtitle' => ''
+        ]
     ],
 ];

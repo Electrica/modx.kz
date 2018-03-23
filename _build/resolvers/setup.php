@@ -123,7 +123,8 @@ $packages = [
     'pdoTools' => '2.10.0-pl',
     'AjaxForm' => '1.1.9-pl',
     'FormIt' => '3.0.4-pl',
-    'DateAgo' => '1.0.4-pl'
+    'DateAgo' => '1.0.4-pl',
+    'yTranslit' => '1.2.0-pl'
 ];
 $success = false;
 

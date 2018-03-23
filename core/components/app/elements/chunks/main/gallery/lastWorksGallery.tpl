@@ -2,8 +2,6 @@
     {foreach $files as $file}
         {if $file.smallImage}
             <img src="{$file.smallImage}" alt="">
-        {else}
-
         {/if}
     {/foreach}
 {else}

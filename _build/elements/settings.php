@@ -35,5 +35,19 @@ return [
         'value' => 'MODX.kz',
         'area' => 'site',
         'namespace' => 'core',
-    ]
+    ],
+    'hidemenu_default' => [
+        'key' => 'hidemenu_default',
+        'xtype' => 'combo-boolean',
+        'value' => true,
+        'area' => 'site',
+        'namespace' => 'core'
+    ],
+    'publish_default' => [
+    'key' => 'publish_default',
+    'xtype' => 'combo-boolean',
+    'value' => true,
+    'area' => 'site',
+    'namespace' => 'core'
+],
 ];

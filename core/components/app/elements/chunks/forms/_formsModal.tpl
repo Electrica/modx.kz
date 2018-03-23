@@ -1,4 +1,5 @@
 <form class="forms ajax_form" action="" method="post" id="mainForm">
+    <input type="hidden" name="antispam" value="">
 
     <div class="row">
         <div class="col-sm-6">

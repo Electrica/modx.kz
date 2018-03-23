@@ -21,12 +21,14 @@
                                 <h2>Оставьте сообщение</h2>
 
                                 {'!AjaxForm' | snippet:[
-                                    'hooks' => 'email',
+                                    'hooks' => 'spam,email',
                                     'form' => '@FILE chunks/forms/_formsModal.tpl',
                                     'emailTpl' => '@FILE chunks/emails/_mainEmails.tpl',
                                     'emailTo' => 'info@modx.kz',
                                     'emailFrom' => 'info@modx.kz',
-                                    'emailSubject' => 'Письмо с сайта modx.kz'
+                                    'emailSubject' => 'Письмо с сайта modx.kz',
+                                    'validate' => 'antispam:blank,name:required,email:email:required,phone:required,subject:required,message:required',
+                                    'validationErrorMessage' => 'Заполните все поля'
                                 ]}
 
                             </section>
@@ -45,63 +47,11 @@
 
                                 <div class="row thumbs gap-md text-center">
 
-                                    <div class="col-sm-6 thumb">
-                                        <figure class="member">
-
-                                            <div class="member-image">
-
-                                                <div class="text-overlay">
-                                                    <div class="info">
-                                                        <ul class="social">
-                                                            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-                                                            <li><a href="#"><i class="icon-s-gplus"></i></a></li>
-                                                            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-                                                        </ul><!-- /.social -->
-                                                    </div><!-- /.info -->
-                                                </div><!-- /.text-overlay -->
-
-                                                <img src="{$assets}images/art/human03.jpg">
-
-                                            </div><!-- /.member-image -->
-
-                                            <figcaption class="member-details bordered no-top-border">
-                                                <h3>
-                                                    Николай Савин
-                                                    <span>+77012827737</span>
-                                                </h3>
-                                            </figcaption>
-
-                                        </figure>
-                                    </div><!-- /.col -->
-
-                                    <div class="col-sm-6 thumb">
-                                        <figure class="member">
-
-                                            <div class="member-image">
-
-                                                <div class="text-overlay">
-                                                    <div class="info">
-                                                        <ul class="social">
-                                                            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-                                                            <li><a href="#"><i class="icon-s-gplus"></i></a></li>
-                                                            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-                                                        </ul><!-- /.social -->
-                                                    </div><!-- /.info -->
-                                                </div><!-- /.text-overlay -->
-
-                                                <img src="{$assets}images/art/human01.jpg">
-
-                                            </div><!-- /.member-image -->
-
-                                            <figcaption class="member-details bordered no-top-border">
-                                                <h3>
-                                                    Мишаня
-                                                    <span>+77074373008</span>
-                                                </h3>
-                                            </figcaption>
-
-                                        </figure>
-                                    </div><!-- /.col -->
+                                    {'!pdoResources'|snippet:[
+                                        'parents' => 5,
+                                        'showHidden' => 1,
+                                        'tpl' => '@FILE chunks/main/team/team.tpl'
+                                    ]}
 
                                 </div><!-- /.row -->
 
@@ -129,8 +79,9 @@
 </div><!-- /.modal -->
 
 
-{'pdoResources'|snippet:[
+{'!pdoResources'|snippet:[
     'parents' => 4,
     'includeContent' => 1,
+    'includeTVs' => 'workurl',
     'tpl' => '@FILE chunks/modal/_modalLastWorks.tpl'
 ]}

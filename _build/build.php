@@ -261,6 +261,49 @@ class AppPackage
         $this->modx->log(modX::LOG_LEVEL_INFO, 'Packaged in ' . count($objects) . ' Resources');
     }
 
+    /**
+     * Add TVs
+     */
+
+    protected function tvs(){
+        $tmps = $resources = include($this->config['elements'] . 'tvs.php');
+        $attributes = [
+            xPDOTransport::UNIQUE_KEY => 'name',
+            xPDOTransport::PRESERVE_KEYS => true,
+            xPDOTransport::UPDATE_OBJECT => true,
+            xPDOTransport::RELATED_OBJECTS => false,
+        ];
+
+
+        foreach ($tmps as $k => $v) {
+            $line = array(
+                'id' => $this->_idx++,
+                'name' => $k,
+                'caption'   => $v['caption'],
+                'description' => $v['description'],
+                'type'      => $v['type'],
+                'display' => $v['display'],
+                'elements' => $v['elements'],
+                'locked' => $v['locked'],
+                'rank' => $v['rank'],
+                'display_params' => $v['display_params'],
+                'default_text' => $v['default_text'],
+                'properties' => $v['properties'],
+                'input_properties'  => $v['input_properties']
+            );
+
+            $tvs = $this->modx->newObject('modTemplateVar');
+            $tvs->fromArray($line);
+
+            $vehicle = $this->builder->createVehicle($tvs, $attributes);
+            $this->builder->putVehicle($vehicle);
+        }
+    }
+
+    /**
+     * Add TVs
+     */
+
 
     /**
      * Add plugins

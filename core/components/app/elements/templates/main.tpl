@@ -176,7 +176,7 @@
                 </header>
                 <div id="owl-latest-works" class="owl-carousel owl-item-gap">
 
-                    {'pdoResources'|snippet:[
+                    {'!pdoResources'|snippet:[
                         'parents' => 4,
                         'limit' => 4,
                         'includeContent' => 1,
